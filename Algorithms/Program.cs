@@ -7,7 +7,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            
+
             Console.WriteLine("=================================================");
             Console.WriteLine("1)Tower of Hanoi");
             Console.WriteLine("-------------------------------------------------");
@@ -26,7 +26,7 @@ namespace Algorithms
             Console.WriteLine("3)KString");
             Console.WriteLine("-------------------------------------------------");
             KStringClass exe3 = new KStringClass(4);
-            exe3.Execute(4,5);
+            exe3.Execute(4, 5);
             Console.WriteLine("=================================================");
 
 
@@ -37,12 +37,19 @@ namespace Algorithms
             exe4.Execute("()()()()(((())))");
             Console.WriteLine("=================================================");
 
+            Console.WriteLine("=================================================");
+            Console.WriteLine("5)FindSpan");
+            Console.WriteLine("-------------------------------------------------");
+            FindSpanClass exe5 = new FindSpanClass();
+            exe5.Execute(new int[] { 6, 3, 4, 5, 2 }, 5);
+            Console.WriteLine("=================================================");
 
-       
 
 
-            
-            
+
+
+
+
 
         }
     }
