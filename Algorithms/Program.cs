@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 
 namespace Algorithms
 {
@@ -44,8 +45,12 @@ namespace Algorithms
             exe5.Execute(new int[] { 6, 3, 4, 5, 2 }, 5);
             Console.WriteLine("=================================================");
 
-
-
+            Console.WriteLine("=================================================");
+            Console.WriteLine("6)SlideWindow");
+            Console.WriteLine("-------------------------------------------------");
+            SlidingWindowClass exe6 = new SlidingWindowClass();
+            exe6.Execute(new int[] { 1, 3, -1, -3, 5, 3, 6, 7 }, 3);
+            Console.WriteLine("=================================================");
 
 
 
