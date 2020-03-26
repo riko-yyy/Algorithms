@@ -9,8 +9,17 @@ namespace Algorithms
         {
         }
 
+        /// <summary>
+        /// ハノイの塔の各円盤の移動プロセスを出力
+        /// </summary>
+        /// <param name="n">円盤の枚数</param>
+        /// <param name="fromPeg">始点</param>
+        /// <param name="toPeg">終点</param>
+        /// <param name="auxPeg">経由点</param>
         public void Execute(int n, char fromPeg, char toPeg, char auxPeg)
         {
+            //n枚の円盤を始点から終点に運ぶ問題をn-1、n-2・・・1枚の問題へと再帰問題へと展開
+
             //末端（Top）
             if (n == 1)
             {
