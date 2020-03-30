@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
+using Algorithms.Structure;
 
 namespace Algorithms
 {
@@ -52,7 +53,13 @@ namespace Algorithms
             exe6.Execute(new int[] { 1, 3, -1, -3, 5, 3, 6, 7 }, 3);
             Console.WriteLine("=================================================");
 
-
+            Console.WriteLine("=================================================");
+            Console.WriteLine("7)PreOrder");
+            Console.WriteLine("-------------------------------------------------");
+            PreOrderClass exe7 = new PreOrderClass();
+            BinaryTreeNode root = new BinaryTreeNode(1, new BinaryTreeNode(2, null, null), new BinaryTreeNode(3, null, null));
+            exe7.Execute(root);
+            Console.WriteLine("=================================================");
 
 
 
