@@ -9,6 +9,7 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
+            //Recursuve
 
             Console.WriteLine("=================================================");
             Console.WriteLine("1)Tower of Hanoi");
@@ -32,6 +33,8 @@ namespace Algorithms
             Console.WriteLine("=================================================");
 
 
+            //Stack
+
             Console.WriteLine("=================================================");
             Console.WriteLine("4)Parser");
             Console.WriteLine("-------------------------------------------------");
@@ -46,6 +49,9 @@ namespace Algorithms
             exe5.Execute(new int[] { 6, 3, 4, 5, 2 }, 5);
             Console.WriteLine("=================================================");
 
+
+            //Queue
+
             Console.WriteLine("=================================================");
             Console.WriteLine("6)SlideWindow");
             Console.WriteLine("-------------------------------------------------");
@@ -53,11 +59,14 @@ namespace Algorithms
             exe6.Execute(new int[] { 1, 3, -1, -3, 5, 3, 6, 7 }, 3);
             Console.WriteLine("=================================================");
 
+
+            //Binary Tree
+
+            BinaryTreeNode root = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, null, null), new BinaryTreeNode(5, null, null)), new BinaryTreeNode(3, null, null));
             Console.WriteLine("=================================================");
             Console.WriteLine("7)PreOrder");
             Console.WriteLine("-------------------------------------------------");
             PreOrderClass exe7 = new PreOrderClass();
-            BinaryTreeNode root = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, null, null), new BinaryTreeNode(5, null, null)), new BinaryTreeNode(3, null, null));
             exe7.Execute(root);
             Console.WriteLine("=================================================");
 
@@ -65,8 +74,14 @@ namespace Algorithms
             Console.WriteLine("8)InOrder");
             Console.WriteLine("-------------------------------------------------");
             InOrderClass exe8 = new InOrderClass();
-            BinaryTreeNode root2 = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, null, null), new BinaryTreeNode(5, null, null)), new BinaryTreeNode(3, null, null));
             exe8.Execute(root);
+            Console.WriteLine("=================================================");
+
+            Console.WriteLine("=================================================");
+            Console.WriteLine("8)InOrder");
+            Console.WriteLine("-------------------------------------------------");
+            PostOrderClass exe9 = new PostOrderClass();
+            exe9.Execute(root);
             Console.WriteLine("=================================================");
 
 
