@@ -84,6 +84,12 @@ namespace Algorithms
             exe9.Execute(root);
             Console.WriteLine("=================================================");
 
+            Console.WriteLine("=================================================");
+            Console.WriteLine("10)LevelOrder");
+            Console.WriteLine("-------------------------------------------------");
+            LevelOrderClass exe10 = new LevelOrderClass();
+            exe10.Execute(root);
+            Console.WriteLine("=================================================");
 
         }
     }
