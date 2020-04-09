@@ -78,7 +78,7 @@ namespace Algorithms
             Console.WriteLine("=================================================");
 
             Console.WriteLine("=================================================");
-            Console.WriteLine("8)InOrder");
+            Console.WriteLine("9)PostOrder");
             Console.WriteLine("-------------------------------------------------");
             PostOrderClass exe9 = new PostOrderClass();
             exe9.Execute(root);
