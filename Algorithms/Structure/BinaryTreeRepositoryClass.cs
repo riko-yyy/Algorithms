@@ -11,7 +11,11 @@ namespace Algorithms.Structure
         {
         }
 
-
+        /// <summary>
+        /// DLRで２分木を横断し、要素の最大値を取得する
+        /// </summary>
+        /// <param name="root">２分岐</param>
+        /// <returns>最大値</returns>
         public int? FindMax(BinaryTreeNode root)
         {
             int? max = null;
@@ -31,11 +35,45 @@ namespace Algorithms.Structure
                 }
 
                 max = holder.Max();
-                
-            } 
+
+            }
             return max;
         }
 
+        /// <summary>
+        /// レベル順序で探索し、要素の有無を返却する
+        /// </summary>
+        /// <param name="root">２分木</param>
+        /// <returns></returns>
+        public bool Contains(BinaryTreeNode root, int item)
+        {
+
+            Queue holder = new Queue();
+            holder.Enqueue(root);
+
+            while (holder.Count > 0)
+            {
+                var tmp = (BinaryTreeNode)holder.Dequeue();
+
+                if (tmp.Data == item)
+                {
+                    return true;
+                }
+
+                if (tmp.Left != null)
+                {
+                    holder.Enqueue(tmp.Left);
+                }
+
+                if (tmp.Right != null)
+                {
+                    holder.Enqueue(tmp.Right);
+                }
+
+            }
+
+            return false;
+        }
 
     }
 }
