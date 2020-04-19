@@ -112,5 +112,25 @@ namespace Algorithms.Structure
             }
         }
 
+        /// <summary>
+        /// 2分木のサイズを取得
+        /// </summary>
+        /// <param name="root">2分木</param>
+        /// <returns></returns>
+        public int Size(BinaryTreeNode root)
+        {
+            int res = 0;
+            if (root == null)
+            {
+
+            }
+            else
+            {
+                res = 1 + Size(root.Left) + Size(root.Right);
+
+            }
+            return res;
+        }
+
     }
 }

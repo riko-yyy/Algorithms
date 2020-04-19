@@ -118,6 +118,12 @@ namespace Algorithms
             exe11.Execute(root);
             Console.WriteLine("=================================================");
 
+            Console.WriteLine("=================================================");
+            Console.WriteLine("4-2-4)Size");
+            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine(repo.Size(root));
+            Console.WriteLine("=================================================");
+
         }
     }
 }
