@@ -133,6 +133,25 @@ namespace Algorithms.Structure
         }
 
         /// <summary>
+        /// 2分木の高さを取得
+        /// </summary>
+        /// <param name="root">2分木</param>
+        /// <returns></returns>
+        public int Height(BinaryTreeNode root)
+        {
+            int res = 0;
+            if (root == null)
+            {
+
+            }
+            else
+            {
+                res = 1 + Math.Max(Height(root.Left), Height(root.Right));
+            }
+            return res;
+        }
+
+        /// <summary>
         /// 後順序横断（LRD）で処理実行
         /// </summary>
         /// <param name="root">親ノード</param>

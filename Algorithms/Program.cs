@@ -132,6 +132,13 @@ namespace Algorithms
             exe12.Execute(root);
             Console.WriteLine("=================================================");
 
+            Console.WriteLine("=================================================");
+            Console.WriteLine("4-2-6)Height");
+            Console.WriteLine("-------------------------------------------------");
+            root = new BinaryTreeNode(1, new BinaryTreeNode(2, null, null),null);
+            Console.WriteLine(repo.Height(root));
+            Console.WriteLine("=================================================");
+
         }
     }
 }
