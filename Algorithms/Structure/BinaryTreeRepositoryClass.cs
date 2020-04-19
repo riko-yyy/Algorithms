@@ -80,7 +80,7 @@ namespace Algorithms.Structure
         /// </summary>
         /// <param name="root">２分木</param>
         /// <param name="item">追加要素</param>
-        public void AddBinaryTree(BinaryTreeNode root, int item)
+        public void Add(BinaryTreeNode root, int item)
         {
             Queue holder = new Queue();
             holder.Enqueue(root);
@@ -117,7 +117,7 @@ namespace Algorithms.Structure
         /// </summary>
         /// <param name="root">2分木</param>
         /// <returns></returns>
-        public int Size(BinaryTreeNode root)
+        public int Count(BinaryTreeNode root)
         {
             int res = 0;
             if (root == null)
@@ -126,7 +126,7 @@ namespace Algorithms.Structure
             }
             else
             {
-                res = 1 + Size(root.Left) + Size(root.Right);
+                res = 1 + Count(root.Left) + Count(root.Right);
 
             }
             return res;

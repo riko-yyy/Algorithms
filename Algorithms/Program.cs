@@ -114,14 +114,14 @@ namespace Algorithms
             LevelOrderClass exe11 = new LevelOrderClass();
             exe11.Execute(root);
             Console.WriteLine("-------------------------------------------------");
-            repo.AddBinaryTree(root, 6);
+            repo.Add(root, 6);
             exe11.Execute(root);
             Console.WriteLine("=================================================");
 
             Console.WriteLine("=================================================");
             Console.WriteLine("4-2-4)Size");
             Console.WriteLine("-------------------------------------------------");
-            Console.WriteLine(repo.Size(root));
+            Console.WriteLine(repo.Count(root));
             Console.WriteLine("=================================================");
 
             Console.WriteLine("=================================================");
