@@ -6,7 +6,7 @@ namespace Algorithms.Structure
         /// <summary>
         /// 親ノード
         /// </summary>
-        public int Data { get; }
+        public int? Data { get; set; }
         /// <summary>
         /// 左の子ノード
         /// </summary>

@@ -124,6 +124,14 @@ namespace Algorithms
             Console.WriteLine(repo.Size(root));
             Console.WriteLine("=================================================");
 
+            Console.WriteLine("=================================================");
+            Console.WriteLine("4-2-5)Delete");
+            Console.WriteLine("-------------------------------------------------");
+            repo.DeleteBinaryTree(root);
+            LevelOrderClass exe12 = new LevelOrderClass();
+            exe12.Execute(root);
+            Console.WriteLine("=================================================");
+
         }
     }
 }

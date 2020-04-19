@@ -132,5 +132,25 @@ namespace Algorithms.Structure
             return res;
         }
 
+        /// <summary>
+        /// 後順序横断（LRD）で処理実行
+        /// </summary>
+        /// <param name="root">親ノード</param>
+        public void DeleteBinaryTree(BinaryTreeNode root)
+        {
+            if (root.Left != null)
+            {
+                DeleteBinaryTree(root.Left);
+            }
+
+            if (root.Right != null)
+            {
+                DeleteBinaryTree(root.Right);
+            }
+
+            root.Data = null;
+
+        }
+
     }
 }
