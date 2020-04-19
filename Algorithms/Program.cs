@@ -95,13 +95,28 @@ namespace Algorithms
             //Binary Tree App
 
             Console.WriteLine("=================================================");
-            Console.WriteLine("4-2)FindMax");
+            Console.WriteLine("4-2-1)FindMax");
             Console.WriteLine("-------------------------------------------------");
             BinaryTreeRepositoryClass repo = new BinaryTreeRepositoryClass();
             Console.WriteLine(repo.FindMax(root));
             Console.WriteLine("=================================================");
 
+            Console.WriteLine("=================================================");
+            Console.WriteLine("4-2-2)Contains");
+            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine(repo.Contains(root, 4));
+            Console.WriteLine(repo.Contains(root, 10));
+            Console.WriteLine("=================================================");
 
+            Console.WriteLine("=================================================");
+            Console.WriteLine("4-2-3)Add");
+            Console.WriteLine("-------------------------------------------------");
+            LevelOrderClass exe11 = new LevelOrderClass();
+            exe11.Execute(root);
+            Console.WriteLine("-------------------------------------------------");
+            repo.AddBinaryTree(root, 6);
+            exe11.Execute(root);
+            Console.WriteLine("=================================================");
 
         }
     }

@@ -10,11 +10,11 @@ namespace Algorithms.Structure
         /// <summary>
         /// 左の子ノード
         /// </summary>
-        public BinaryTreeNode Left { get; }
+        public BinaryTreeNode Left { get; set; }
         /// <summary>
         /// 右の子ノード
         /// </summary>
-        public BinaryTreeNode Right { get; }
+        public BinaryTreeNode Right { get; set; }
 
         /// <summary>
         /// コンストラクタ

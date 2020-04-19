@@ -14,7 +14,7 @@ namespace Algorithms.Structure
         /// <summary>
         /// DLRで２分木を横断し、要素の最大値を取得する
         /// </summary>
-        /// <param name="root">２分岐</param>
+        /// <param name="root">２分木</param>
         /// <returns>最大値</returns>
         public int? FindMax(BinaryTreeNode root)
         {
@@ -73,6 +73,43 @@ namespace Algorithms.Structure
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// レベル順序で、要素を追加
+        /// </summary>
+        /// <param name="root">２分木</param>
+        /// <param name="item">追加要素</param>
+        public void AddBinaryTree(BinaryTreeNode root, int item)
+        {
+            Queue holder = new Queue();
+            holder.Enqueue(root);
+
+            while (holder.Count > 0)
+            {
+                var tmp = (BinaryTreeNode)holder.Dequeue();
+
+                if (tmp.Left != null)
+                {
+                    holder.Enqueue(tmp.Left);
+                }
+                else
+                {
+                    tmp.Left = new BinaryTreeNode(item, null, null);
+                    return;
+                }
+
+                if (tmp.Right != null)
+                {
+                    holder.Enqueue(tmp.Right);
+                }
+                else
+                {
+                    tmp.Right = new BinaryTreeNode(item, null, null);
+                    return;
+                }
+
+            }
         }
 
     }
