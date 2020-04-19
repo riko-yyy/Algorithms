@@ -133,6 +133,33 @@ namespace Algorithms.Structure
         }
 
         /// <summary>
+        /// 2分木の葉の数を取得
+        /// </summary>
+        /// <param name="root">2分木</param>
+        /// <returns></returns>
+        public int CountLeaf(BinaryTreeNode root)
+        {
+            int res = 0;
+            if (root == null)
+            {
+
+            }
+            else
+            {
+                if (root.Left == null && root.Right == null)
+                {
+                    res += 1;
+                }
+                else
+                {
+                    res = CountLeaf(root.Left) + CountLeaf(root.Right);
+                }
+                
+            }
+            return res;
+        }
+
+        /// <summary>
         /// 2分木の高さを取得
         /// </summary>
         /// <param name="root">2分木</param>

@@ -139,6 +139,13 @@ namespace Algorithms
             Console.WriteLine(repo.Height(root));
             Console.WriteLine("=================================================");
 
+            Console.WriteLine("=================================================");
+            Console.WriteLine("4-2-7)CountLeaf");
+            Console.WriteLine("-------------------------------------------------");
+            root = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, null, null), new BinaryTreeNode(5, null, null)), new BinaryTreeNode(3, null, null));
+            Console.WriteLine(repo.CountLeaf(root));
+            Console.WriteLine("=================================================");
+
         }
     }
 }
