@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using Algorithms.Structure;
 
@@ -135,7 +136,7 @@ namespace Algorithms
             Console.WriteLine("=================================================");
             Console.WriteLine("4-2-6)Height");
             Console.WriteLine("-------------------------------------------------");
-            root = new BinaryTreeNode(1, new BinaryTreeNode(2, null, null),null);
+            root = new BinaryTreeNode(1, new BinaryTreeNode(2, null, null), null);
             Console.WriteLine(repo.Height(root));
             Console.WriteLine("=================================================");
 
@@ -144,6 +145,15 @@ namespace Algorithms
             Console.WriteLine("-------------------------------------------------");
             root = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, null, null), new BinaryTreeNode(5, null, null)), new BinaryTreeNode(3, null, null));
             Console.WriteLine(repo.CountLeaf(root));
+            Console.WriteLine("=================================================");
+
+            Console.WriteLine("=================================================");
+            Console.WriteLine("4-2-8)Route");
+            Console.WriteLine("-------------------------------------------------");
+            root = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, null, null), new BinaryTreeNode(5, null, null)), new BinaryTreeNode(3, null, null));
+            int[] path = new int[3];
+            repo.Route(root, path, 0);
+            Console.WriteLine();
             Console.WriteLine("=================================================");
 
         }

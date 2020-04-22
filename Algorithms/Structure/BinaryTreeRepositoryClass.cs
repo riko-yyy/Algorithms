@@ -154,7 +154,7 @@ namespace Algorithms.Structure
                 {
                     res = CountLeaf(root.Left) + CountLeaf(root.Right);
                 }
-                
+
             }
             return res;
         }
@@ -195,6 +195,42 @@ namespace Algorithms.Structure
             }
 
             root.Data = null;
+
+        }
+
+        /// <summary>
+        /// 根から葉までの履歴出力
+        /// </summary>
+        /// <param name="root">親ノード</param>
+        /// <param name="route">ルート履歴保持</param>
+        /// <param name="depth">深さ</param>
+        public void Route(BinaryTreeNode root, int[] route, int depth)
+        {
+            if (root.Data == null)
+            {
+                return;
+            }
+
+            route[depth] = (int)root.Data;
+            depth++;
+
+            if (root.Left == null && root.Right == null)
+            {
+                Console.WriteLine(string.Join("-", route));
+            }
+            else
+            {
+                if (root.Left != null)
+                {
+                    Route(root.Left, route, depth);
+                }
+
+                if (root.Right != null)
+                {
+                    Route(root.Right, route, depth);
+                }
+            }
+
 
         }
 
