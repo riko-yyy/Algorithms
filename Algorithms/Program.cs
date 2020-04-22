@@ -153,7 +153,13 @@ namespace Algorithms
             root = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, null, null), new BinaryTreeNode(5, null, null)), new BinaryTreeNode(3, null, null));
             int[] path = new int[3];
             repo.Route(root, path, 0);
-            Console.WriteLine();
+            Console.WriteLine("=================================================");
+
+            Console.WriteLine("=================================================");
+            Console.WriteLine("4-2-9)Sum");
+            Console.WriteLine("-------------------------------------------------");
+            root = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, null, null), new BinaryTreeNode(5, null, null)), new BinaryTreeNode(3, null, null));
+            Console.WriteLine(repo.Sum(root));
             Console.WriteLine("=================================================");
 
         }

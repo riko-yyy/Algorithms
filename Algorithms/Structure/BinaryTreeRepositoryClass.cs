@@ -234,5 +234,24 @@ namespace Algorithms.Structure
 
         }
 
+        /// <summary>
+        /// 2分木の要素の和を取得
+        /// </summary>
+        /// <param name="root">2分木</param>
+        /// <returns></returns>
+        public int Sum(BinaryTreeNode root)
+        {
+            int res = 0;
+            if (root == null)
+            {
+
+            }
+            else
+            {
+                res = (int)root.Data + Sum(root.Left) + Sum(root.Right);
+            }
+            return res;
+        }
+
     }
 }
