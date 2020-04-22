@@ -151,7 +151,7 @@ namespace Algorithms
             Console.WriteLine("4-2-8)Route");
             Console.WriteLine("-------------------------------------------------");
             root = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, null, null), new BinaryTreeNode(5, null, null)), new BinaryTreeNode(3, null, null));
-            int[] path = new int[3];
+            int[] path = new int[100];
             repo.Route(root, path, 0);
             Console.WriteLine("=================================================");
 
@@ -160,6 +160,15 @@ namespace Algorithms
             Console.WriteLine("-------------------------------------------------");
             root = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, null, null), new BinaryTreeNode(5, null, null)), new BinaryTreeNode(3, null, null));
             Console.WriteLine(repo.Sum(root));
+            Console.WriteLine("=================================================");
+
+            Console.WriteLine("=================================================");
+            Console.WriteLine("4-2-10)Mirror");
+            Console.WriteLine("-------------------------------------------------");
+            root = new BinaryTreeNode(1, new BinaryTreeNode(2, new BinaryTreeNode(4, null, null), new BinaryTreeNode(5, null, null)), new BinaryTreeNode(3, null, null));
+            repo.Route(root,path,0);
+            root = repo.Mirror(root);
+            repo.Route(root, path, 0);
             Console.WriteLine("=================================================");
 
         }

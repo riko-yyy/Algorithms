@@ -216,7 +216,7 @@ namespace Algorithms.Structure
 
             if (root.Left == null && root.Right == null)
             {
-                Console.WriteLine(string.Join("-", route));
+                Console.WriteLine(string.Join("-", route.ToList().Take(depth)));
             }
             else
             {
@@ -251,6 +251,23 @@ namespace Algorithms.Structure
                 res = (int)root.Data + Sum(root.Left) + Sum(root.Right);
             }
             return res;
+        }
+
+        /// <summary>
+        /// 2分木を反転した2分木を取得
+        /// </summary>
+        /// <param name="root">2分木</param>
+        /// <returns></returns>
+        public BinaryTreeNode Mirror(BinaryTreeNode root)
+        {
+            BinaryTreeNode tmp;
+            if (root != null)
+            {
+                tmp = Mirror(root.Right);
+                root.Right = Mirror(root.Left);
+                root.Left = tmp;
+            }
+            return root;
         }
 
     }
